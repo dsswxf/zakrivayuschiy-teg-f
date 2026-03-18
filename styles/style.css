@@ -30,22 +30,19 @@
   text-decoration: none;
 }
 
-.header__title,
-.header__subtitle,
-.button__text,
-.dialog__text {
+.header__title {
   font-family: var(--font-accent);
+  font-size: clamp(49px, 4.54vw, 65px);
   line-height: 1;
 }
 
-.header__title {
-  font-size: clamp(49px, 4.54vw, 65px);
-}
-
 .header__subtitle {
+  font-family: var(--font-accent);
   font-size: clamp(14px, 1.62vw, 23px);
+  line-height: 1;
   text-transform: uppercase;
 }
+
 
 .content {
   padding-bottom: 103px;
@@ -154,6 +151,7 @@
 }
 
 .sparks path { fill: var(--animation-fill-color); }
+.sparks {opacity: 0;}
 
 .button {
   position: relative;
@@ -197,7 +195,9 @@
 }
 
 .button__text {
+  font-family: var(--font-accent);
   font-size: 14px;
+  line-height: 1;
 }
 
 .save-button {
@@ -238,7 +238,7 @@
 }
 
 .dialog__text {
-  color: #000;
+  font-family: var(--font-accent);
   font-size: 14px;
   line-height: 1.5;
   text-transform: uppercase;
@@ -254,6 +254,10 @@
 }
 
 @media (width <= 375px) {
+
+.content-width {
+  padding: 0;
+}
   .header {
     margin-block: 100px;
     padding-block: 120px;
