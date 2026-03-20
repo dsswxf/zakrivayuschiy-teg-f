@@ -4,7 +4,7 @@
   margin: 0;
   color: var(--text-color);
   font-family: var(--font-main);
-  font-variation-settings: 'wght' var(--font-main-weight);
+  font-variation-settings: "wght" var(--font-main-weight);
   background-color: var(--bg-color);
   background-image: var(--bg-gradient);
   background-size: cover;
@@ -43,7 +43,6 @@
   text-transform: uppercase;
 }
 
-
 .content {
   padding-bottom: 103px;
 }
@@ -62,7 +61,7 @@
   padding: 5px 10px 4px;
   font-size: 18px;
   line-height: 1.21;
-  font-variation-settings: 'wght' var(--font-title-weight);
+  font-variation-settings: "wght" var(--font-title-weight);
 }
 
 .card__image-wrap {
@@ -151,7 +150,7 @@
 }
 
 .sparks path { fill: var(--animation-fill-color); }
-.sparks {opacity: 0;}
+.sparks { opacity: 0; }
 
 .button {
   position: relative;
@@ -168,7 +167,7 @@
 }
 
 .button::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: #000;
@@ -180,13 +179,33 @@
 .button:focus { outline: none; }
 .button:focus-visible { box-shadow: 2px 2px 0 #000; }
 
-.button__text,
-.save-button__icon,
-.dialog__icon {
+.button__text {
   position: relative;
   z-index: 1;
   mix-blend-mode: difference;
   color: #fff;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.save-button__icon {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  color: #fff;
+  inline-size: 21px;
+  block-size: 21px;
+  flex: none;
+}
+
+.dialog__icon {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  color: #000;
+  inline-size: 39px;
+  block-size: 39px;
 }
 
 .card__like-button {
@@ -194,22 +213,10 @@
   block-size: 38px;
 }
 
-.button__text {
-  font-family: var(--font-accent);
-  font-size: 14px;
-  line-height: 1;
-}
-
 .save-button {
   display: flex;
   margin: 52px auto 0;
   padding: 15px 20px;
-}
-
-.save-button__icon {
-  inline-size: 21px;
-  block-size: 21px;
-  flex: none;
 }
 
 .dialog {
@@ -230,13 +237,6 @@
   padding: 30px;
 }
 
-.dialog__icon {
-  inline-size: 39px;
-  block-size: 39px;
-  color: #000;
-  mix-blend-mode: normal;
-}
-
 .dialog__text {
   font-family: var(--font-accent);
   font-size: 14px;
@@ -254,10 +254,11 @@
 }
 
 @media (width <= 375px) {
+  .content-width {
+    padding: 0;
+    inline-size: 100%;
+  }
 
-.content-width {
-  padding: 0;
-}
   .header {
     margin-block: 100px;
     padding-block: 120px;
