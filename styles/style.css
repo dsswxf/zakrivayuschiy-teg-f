@@ -203,11 +203,10 @@
   position: relative;
   z-index: 1;
   mix-blend-mode: difference;
-  color: #000;
+  color: #fff;
   inline-size: 39px;
   block-size: 39px;
 }
-
 .card__like-button {
   min-inline-size: 130px;
   block-size: 38px;
